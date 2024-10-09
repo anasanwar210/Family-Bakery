@@ -1,0 +1,668 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+body {
+  font-family: Alegreya, Arial, sans-serif;
+}
+
+/*
+  ==========================================================================
+                                  Start Global CSS Role
+  ==========================================================================
+*/
+
+
+::selection {
+  background-color: #ae9768;
+  color: #fff;
+}
+
+.who-we-are .container,
+.our-location .container,
+.our-baking .container,
+.contact .container,
+.footer-main .container,
+.footer-bottom .container {
+  width: 80%;
+  margin: auto;
+  padding: 60px;
+}
+
+.who-we-are .container .desc h2,
+.our-location .container .desc h2,
+.our-baking .container .title h2,
+.our-baking .container .items .item .desc h3,
+.contact .container .contact-inf h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #303030;
+}
+
+.who-we-are .container .desc p,
+.our-location .container .desc p,
+.our-baking .container .title p,
+.our-baking .container .items .item .desc p,
+.contact .container .contact-inf p {
+  font-size: 20px;
+  color: #606060;
+}
+
+.contact .container .contact-inf ul li .radius,
+.who-we-are .container .desc ul li .radius {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+}
+
+.contact .container .contact-inf ul li .radius i,
+.who-we-are .container .desc ul li .radius i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  width: 100%;
+  border: 2px solid #ae9768;
+  border-radius: 8px;
+}
+
+ul {
+  list-style: none;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+/*
+  ==========================================================================
+                                End Global CSS Role
+  ==========================================================================
+*/
+
+/*
+  ==========================================================================
+                                  Start Header
+  ==========================================================================
+*/
+
+/* 
+  Start NavBar Section
+*/
+
+header.home {
+  height: 100vh;
+  background-image: url(../image/home.jpg);
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+}
+
+header .container {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header .container .navigate {
+  width: 75%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+header .container .navigate .logo {
+  width: 44%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header .container .navigate .logo img {
+  width: 25%;
+  border: none;
+}
+
+header .container .navigate nav {
+  display: inline-block;
+  vertical-align: middle;
+  width: 51%;
+}
+
+header .container .navigate nav ul li {
+  display: inline-block;
+}
+
+header .container .navigate nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px;
+  transition: all 0.2s;
+}
+
+header .container .navigate nav ul li a:hover {
+  color: #ae9768;
+}
+
+/* 
+  End NavBar Section
+*/
+
+/* 
+  Start Content Of Header
+*/
+
+header .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56%;
+  text-align: center;
+  padding: 25px 10px;
+  color: #fff;
+  line-height: 50px;
+}
+
+header .content span {
+  font-size: 30px;
+}
+
+header .content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+header .content p {
+  font-size: 30px;
+}
+
+header .content :is(h1, p) {
+  padding: 15px;
+}
+
+header .content .btn button {
+  outline: none;
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+header .content .btn button:first-child {
+  background-color: #ae9768;
+  color: #fff;
+}
+
+header .content .btn button:last-child {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+header .content .btn button:hover {
+  background-color: #fff;
+  cursor: pointer;
+  color: #000;
+}
+
+/* 
+  End Content Of Header
+*/
+
+/* 
+  Start Animation
+*/
+
+header .animation {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  border: 1px solid #fff;
+  width: 35px;
+  height: 55px;
+  transform: translate(-50%, -50%);
+  border-radius: 27px;
+}
+
+header .animation .drop {
+  position: absolute;
+  top: 0%;
+  left: 38%;
+  background-color: #fff;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  animation: drop 2.5s ease-in-out infinite;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    top: 0%;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(50%);
+  }
+
+  100% {
+    opacity: 0;
+    top: 50%;
+    transform: translateY(95%);
+  }
+}
+
+header .animation .go-to-about {
+  transition: all 0.5s ease-in-out;
+}
+
+header .animation .go-to-about a {
+  /* background-color: red; */
+  position: absolute;
+  /* top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  inset: 0;
+  z-index: 100;
+}
+
+/* 
+  End Animation
+*/
+
+/*
+==========================================================================
+                              End Header
+==========================================================================
+*/
+
+/*
+  ==========================================================================
+                            Start Who-We-Are
+  ==========================================================================
+*/
+
+.who-we-are .container .img-contain {
+  width: 45%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0px;
+}
+
+.who-we-are .container .desc {
+  width: 45%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 40px;
+}
+
+.who-we-are .container .desc p {
+  padding: 10px 0;
+}
+
+.who-we-are .container .desc ul li {
+  color: #303030;
+  font-size: 20px;
+}
+
+.who-we-are .container .desc ul li .radius {
+  border: 2px solid #ae9768;
+  padding: 8px;
+}
+
+.who-we-are .container .desc ul li .radius:hover {
+  background-color: #ae9768;
+  color: #fff;
+}
+
+.who-we-are .container .desc ul li .radius i {
+  transition: all 0.2s ease-in-out;
+}
+
+.who-we-are .container .desc ul li .radius span {
+  padding: 0 8px;
+}
+
+.who-we-are .container .desc ul li span {
+  margin-left: 5px;
+  color: #606060;
+}
+
+/*
+  ==========================================================================
+                                  End Who-We-Are
+  ==========================================================================
+*/
+
+/*
+  ==========================================================================
+                                Start Our Location
+  ==========================================================================
+*/
+
+.our-location {
+  background-color: #eee;
+}
+.our-location .desc {
+  display: inline-block;
+  vertical-align: middle;
+  width: 44%;
+  padding: 15px 40px;
+}
+
+.our-location :is(h2, p) {
+  margin-bottom: 15px;
+}
+
+.our-location .img-contain {
+  display: inline-block;
+  vertical-align: middle;
+  width: 44%;
+}
+
+/*
+  ==========================================================================
+                                End Our Location
+  ==========================================================================
+*/
+
+/*
+  ==========================================================================
+                                Start Our Baking
+  ==========================================================================
+*/
+
+.our-baking .container .title {
+  text-align: center;
+  margin: 20px;
+  line-height: 40px;
+}
+
+.our-baking .container .items .item {
+  float: left;
+  width: 31.5%;
+  margin: 0px auto;
+}
+
+.our-baking .container .items .item {
+  text-align: center;
+  padding: 10px;
+}
+
+.our-baking .container .items .item .desc h3 {
+  margin: 10px 0;
+}
+
+.our-baking .container .items .item .desc p {
+  font-size: 18px !important;
+}
+
+/*
+  ==========================================================================
+                                End Our Baking
+  ==========================================================================
+*/
+
+/*
+  ==========================================================================
+                            Start Contact Information
+  ==========================================================================
+*/
+
+.contact .container :is(.contact-inf, .contact-map) {
+  float: left;
+  width: 44%;
+}
+
+.contact .container .contact-inf {
+  padding: 10px 40px;
+}
+
+.contact .container .contact-inf p {
+  margin: 15px 0;
+}
+
+.contact .container .contact-inf ul li {
+  font-size: 19px;
+  line-height: 35px;
+}
+.contact .container .contact-inf ul li .radius {
+  background-color: #ae9768;
+  color: #fff;
+}
+
+.contact .container .contact-inf ul li span {
+  color: #606060;
+}
+
+/*
+  ==========================================================================
+                            End Contact Information
+  ==========================================================================
+*/
+
+/*
+  ==========================================================================
+                            Start Footer Main
+  ==========================================================================
+*/
+
+.footer-main {
+  background-color: #403d38;
+}
+
+.footer-main .container .desc {
+  float: left;
+  width: 22%;
+}
+
+.footer-main .container .desc {
+  margin-left: 8px;
+  padding: 8px;
+}
+
+.footer-main .container .desc .title h3 {
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-main .container .about-us p {
+  font-size: 15px;
+  color: #969696;
+  margin: 12px 0;
+  line-height: 30px;
+}
+
+.footer-main
+  .container
+  :where(.we-are-special, .opening-hours, .contact-details)
+  ul
+  li {
+  color: #969696;
+  font-size: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-main
+  .container
+  :where(.we-are-special, .opening-hours, .contact-details)
+  ul
+  li:last-child {
+  border-bottom: none;
+}
+
+.footer-main .container :where(.we-are-special, .opening-hours) ul li::before {
+  content: ">";
+  margin-right: 8px;
+}
+
+.footer-main .container .contact-details {
+  background-image: url(../image/contact-details-map.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-main .container .contact-details ul li .icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 5%;
+  padding: 10px;
+}
+
+.footer-main .container .contact-details ul li span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 85%;
+}
+
+.footer-main .container .contact-details ul li span:last-child {
+  line-height: 23px;
+}
+
+/*
+  ==========================================================================
+                              End Footer Main
+  ==========================================================================
+*/
+
+/*
+  ==========================================================================
+                            Start Footer Bottom
+  ==========================================================================
+*/
+
+.footer-bottom {
+  background-color: #353330;
+}
+
+.footer-bottom .container {
+  text-align: center;
+}
+
+.footer-bottom .container .footer-img {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.footer-bottom .container .footer-img img {
+  border: none;
+}
+
+.footer-bottom .container p.copy-right {
+  color: #777;
+}
+
+.footer-bottom .container ul {
+  margin: auto;
+  width: 17%;
+  padding: 10px;
+  /* border: 2px solid #ddd; */
+}
+
+.footer-bottom .container ul li {
+  float: left;
+}
+
+.footer-bottom .container ul li a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #484540;
+  color: #8c8a86;
+  border-radius: 50%;
+  padding: 3px;
+  margin-left: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-bottom .container ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom .container ul li:nth-child(1) a:hover {
+  background-color: #275d8a;
+}
+
+.footer-bottom .container ul li:nth-child(2) a:hover {
+  background-color: #f44336;
+}
+
+.footer-bottom .container ul li:nth-child(3) a:hover {
+  background-color: #0a66c2;
+}
+
+.footer-bottom .container ul li:nth-child(4) a:hover {
+  background-color: #1da1f2;
+}
+
+.footer-bottom .container ul li i {
+  text-align: center;
+  align-items: center;
+  padding-top: 6px;
+  font-size: 25px;
+}
+
+/*
+  ==========================================================================
+                              End Footer Bottom
+  ==========================================================================
+*/
+
+/*
+  ==========================================================================
+                              Start Panel Menu
+  ==========================================================================
+*/
+
+.panel-menu {
+  background-color: white;
+  position: fixed;
+  top: 30%;
+  right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.panel-menu ul li {
+  padding: 8px;
+}
+
+.panel-menu ul li a {
+  color: #666;
+  text-decoration: none;
+  padding: 7px 0;
+}
+
+.panel-menu ul li a:hover {
+  cursor: pointer;
+  color: #0a66c2;
+}
+
+.panel-menu ul li a i {
+  font-size: 22px;
+}
+
+/*
+  ==========================================================================
+                              End Panel Menu
+  ==========================================================================
+*/
